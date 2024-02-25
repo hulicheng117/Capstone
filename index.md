@@ -42,8 +42,7 @@ We have also plotted the first layer of CNFM and AGOP to provide visual interpre
 ![figure3](https://github.com/hulicheng117/DSC180-website/assets/97436268/d40cb914-4735-4cd2-9956-886b46e864f2)
 
 #### Acknowledgement and References
-[1] DanielBeaglehole,AdityanarayananRadhakrishnan,ParthePandit,andMikhailBelkin. Mechanism of feature learning in convolutional neural networks, 2023.
-[2] AdityanarayananRadhakrishnan,DanielBeaglehole,ParthePandit,andMikhailBelkin.
-Mechanism of feature learning in deep fully connected networks and kernel machines that recursively learn features, 2023.
+[1] DanielBeaglehole,AdityanarayananRadhakrishnan,ParthePandit,andMikhailBelkin. Mechanism of feature learning in convolutional neural networks, 2023.\
+[2] AdityanarayananRadhakrishnan,DanielBeaglehole,ParthePandit,andMikhailBelkin.Mechanism of feature learning in deep fully connected networks and kernel machines that recursively learn features, 2023.
 
 
