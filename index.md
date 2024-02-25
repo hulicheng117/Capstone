@@ -1,4 +1,4 @@
-## Data Science Capstone Project: [Project Title]
+## Neural Network Feature Development on Image Data
 
 #### Introduction
 Neural networks, mirroring the human brain’s pattern recognition abilities, 
