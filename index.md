@@ -1,6 +1,6 @@
 ## Neural Network Feature Development on Image Data
 
-#### Introduction
+### Introduction
 Neural networks, mirroring the human brain’s pattern recognition abilities, 
 have revolutionized machine learning. Their success spans various fields, 
 from healthcare to finance, showcasing exceptional problem-solving and data interpretation capabilities. 
@@ -19,13 +19,13 @@ features within convolutional networks, specifically through the lens of trainin
 of features by individual filters and their increasing significance in capturing the intrinsic patterns present in the data. By elucidating the path of feature evolution in neural networks, 
 our aim is to shed light on their learning dynamics, potentially paving the way for enhanced performance in tackling more sophisticated tasks.
 
-#### Neural Feature Matrix (NFM) 
+### Neural Feature Matrix (NFM) 
 The Neural Feature Matrix (NFM) refers to the representation of features in a neural network. In deep learning, features are the individual measurable properties or characteristics of the phenomenon being observed. The NFM essentially represents how these features are encoded or transformed by a neural network. This matrix can be thought of as a structured way to represent the information that the network has learned about the data. 
 
-#### Average Gradient Outer Product (AGOP)
+### Average Gradient Outer Product (AGOP)
 The Average Gradient Outer Product (AGOP) is a concept related to the analysis of how changes in the input of a neural network affect its output, particularly in the context of understanding the network's internal representations and learning dynamics. It involves computing the outer product of the gradient of the network's output with respect to its input (or intermediate representations) and averaging this over multiple instances or over the training dataset.
 
-#### Visualizing features captured by CNFM and AGOP
+### Visualizing features captured by CNFM and AGOP
 We used a VGG11 model with 8 convolutional layers. We experimented on the MNIST dataset and extracted the 
 values NFM and average gradient outer product (AGOP) in each layer. We looked at the correlations between the initial & trained 
 CNFM and the trained CNFM & AGOP. Our investigation suggests that there is a high correlation between the trained CNFM and AGOP as 
@@ -44,15 +44,11 @@ We have also plotted the first layer of CNFM and AGOP to provide visual interpre
 
 
 
-#### Method and experiment
+### Method and experiment
 
 
 
-#### Conclusion
-
-![figure2](https://github.com/hulicheng117/DSC180-website/assets/97436268/49ea3d39-5096-4ca1-8e0e-472ced9caa9a)
-
-![figure3](https://github.com/hulicheng117/DSC180-website/assets/97436268/d40cb914-4735-4cd2-9956-886b46e864f2)
+### Conclusion
 
 #### Acknowledgement and References
 [1] DanielBeaglehole,AdityanarayananRadhakrishnan,ParthePandit,andMikhailBelkin. Mechanism of feature learning in convolutional neural networks, 2023.\
