@@ -63,6 +63,10 @@ To investigate the application of the Neural Feature Matrix (NFM) and Average Gr
   ![ValTrainDiff](https://github.com/hulicheng117/DSC180-website/assets/97436268/cac3469f-d96a-405e-8f55-452dc2ebf10c)
 </div>
 
+In our training graph we can see both training and validation accuarcy of Kaiming_NFM outperform the Kaiming_uniform which is the default initialization
+method used in pytorch on CIFAR-100. We also ploted the difference of validation loss and training loss for each initialization method acrossed training process. When the difference is negative, the validation loss is lower than the training loss. This can be a sign of underfitting, meaning the model is not capturing the underlying trends in the training data enough. When the difference is positive (above 0 on the y-axis), the validation loss is higher than the training loss and indicate overfitting. From the graph, our initialization method of agop and nfm showed robust to overfit than other initialization
+method and Kaiming_nfm also outperformed among all initialization methods with Kaiming initialization scaling.
+
 
 
 ### Results and Conclusions
@@ -72,7 +76,7 @@ To investigate the application of the Neural Feature Matrix (NFM) and Average Gr
 </div>
 
 
-NFM initialization outperformed all other initialization methods (including pytorch default initialization methods), achieving the highest validation accuracy across all the datasets. With Kaiming NFM, in particular, achieving remarkable results in 3 of the 4 datasets. It was able to attain highest validation accuracies of 93.23% on SVHN, 48.33% on CIFAR100, and 33.78% on Tiny-ImageNet. 
+NFM initialization outperformed all other initialization methods, achieving the highest validation accuracy across all the datasets. With Kaiming NFM, in particular, achieving remarkable results in 3 of the 4 datasets. It was able to attain highest validation accuracies of 93.23% on SVHN, 48.33% on CIFAR100, and 33.78% on Tiny-ImageNet. 
 
 Our initialization methods can be viewed as a soft way of transferring learning. We used the pre-trained model on ImageNet and train the model on simpler datasets. It is worth investigating what if we initialize with model pre-trained on simpler datasets and train on more complex datasets. Some other potential areas of improvement include:
 
