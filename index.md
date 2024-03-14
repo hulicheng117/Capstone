@@ -58,9 +58,10 @@ To investigate the application of the Neural Feature Matrix (NFM) and Average Gr
 
 ### Training graphs
 ![cifar_100_acc](https://github.com/hulicheng117/DSC180-website/assets/97436268/00c1f9ae-8ab3-4576-91a7-865046e19f9f)
-
-![ValTrainDiff](https://github.com/hulicheng117/DSC180-website/assets/97436268/cac3469f-d96a-405e-8f55-452dc2ebf10c)
-
+<div style="text-align:center">
+  
+  ![ValTrainDiff](https://github.com/hulicheng117/DSC180-website/assets/97436268/cac3469f-d96a-405e-8f55-452dc2ebf10c)
+</div>
 
 
 
