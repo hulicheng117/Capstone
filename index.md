@@ -61,8 +61,9 @@ To investigate the application of the Neural Feature Matrix (NFM) and Average Gr
 
 <div style="text-align:center">
   
-  ![ValTrainDiff](https://github.com/hulicheng117/DSC180-website/assets/97436268/b26c60b7-a312-44b9-bc1c-01f06693c753)
   
+  ![ValTrainDiff](https://github.com/hulicheng117/DSC180-website/assets/97436268/cac3469f-d96a-405e-8f55-452dc2ebf10c)
+
 </div>
 
 
