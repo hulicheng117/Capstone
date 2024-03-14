@@ -1,26 +1,38 @@
 ## Neural Network Feature Development on Image Data
 
 ### Introduction
-Neural networks, mirroring the human brain’s pattern recognition abilities, 
-have revolutionized machine learning. Their success spans various fields, 
-from healthcare to finance, showcasing exceptional problem-solving and data interpretation capabilities. 
-As neural networks increasingly outperform traditional algorithms, it becomes crucial to unravel their complex learning mechanisms. 
-This understanding not only advances our knowledge but also opens doors to more robust and efficient applications. 
-Our project aims to delve into these intricacies, offering deeper insights into the functioning of neural networks and their 
-evolving role in modern technology.
+Neural networks, mirroring the human brain’s pattern recognition abilities, have revolutionized machine learning. Their success spans various fields, from healthcare to finance,
+showcasing exceptional problem-solving and data interpretation capabilities. As a neural net-
+works increasingly outperform traditional algorithms, it becomes crucial to unravel their
+complex learning mechanisms.
+Previous studies Beaglehole et al. (2023) and Radhakrishnan et al. (2023) formulated Convolutional Neural Feature Ansatz, demonstrating that features selected by convolutional
+networks can be recovered by computing the average gradient outer product (AGOP) of
+the trained network with respect to image patches given by empirical covariance matrices
+of filters at any given layer. Concurrently, these investigations identified an Average Gradient
+Outer Product (AGOP) and Neural Feature Matrix (NFM) as key elements characterizing
+feature learning in neural networks.
+Meanwhile, another critical aspect of deep learning that influences neural network performance-
+mance and convergence is the method of initialization. Proper Initialization is crucial; due
+to the use of backpropagation in neural networks, improper initialization can lead to the
+vanishing or exploding gradient problem, thereby affecting the overall training process.
+Our study aims to combine the concepts of NFM and AGOP with initialization methods.
+This exploration seeks to address the question: How does the application of the Neural
+Feature Matrix and Average Gradient Outer Product as initialization affect the performance of neural networks?
 
-The study of feature evolution throughout the training phase in neural networks is pivotal in advancing our 
-understanding of modern machine learning methodologies. The previous studies Beaglehole et al. (2023) and Radhakrishnan et al. (2023) formulated Convolutional
-Neural Feature Ansatz, in which the features selected by convolutional networks can be recovered by computing the average gradient outer product (AGOP) of the trained network with 
-respect to image patches given by empirical covariance matrices of filters at any given layer. 
+### Feature Learning with NFM(Neural Feature Matrix) and AGOP(Average Gradient Outer Product)
+* The Neural Feature Matrix (NFM), denoted by $W^TW$, is the neural feature matrix resulting from multiplying model’s weight matrices.
+* The Average Gradient Outer Product (AGOP) is the average gradient outer product over patches, it is the gradient
+with respect to that patch average over data.
+* Previous studies posit the __Convolutional Neural Feature Ansatz__ \cite{beaglehole2023mechanism}, which states that there is a positive correlation between AGOP and NFM.
+<div style="text-align:center">
 
-In this work, we are going to concentrate on examining the progression of image data
-features within convolutional networks, specifically through the lens of training VGG11 models on the CIFAR-10 dataset. Our investigation delves into the selection process 
-of features by individual filters and their increasing significance in capturing the intrinsic patterns present in the data. By elucidating the path of feature evolution in neural networks, 
-our aim is to shed light on their learning dynamics, potentially paving the way for enhanced performance in tackling more sophisticated tasks.
-
-### Neural Feature Matrix (NFM) 
-The Neural Feature Matrix (NFM) refers to the representation of features in a neural network. In deep learning, features are the individual measurable properties or characteristics of the phenomenon being observed. The NFM essentially represents how these features are encoded or transformed by a neural network. This matrix can be thought of as a structured way to represent the information that the network has learned about the data. 
+$$W^TW \propto \frac{1}{n}\sum^{n}_{p=1} \nabla f(x_p)\nabla f(x_p)^T$$
+</div>
+*The significance of AGOP and NFM is highlighted by findings suggesting that
+these measures, of early layers, perform operations similar to edge detection.
+As shown in Figure 1, Patch-AGOPs and NFMs from pre-trained VGG11
+identified edges in images and progressively highlighted regions of images
+used for prediction
 
 ### Average Gradient Outer Product (AGOP)
 The Average Gradient Outer Product (AGOP) is a concept related to the analysis of how changes in the input of a neural network affect its output, particularly in the context of understanding the network's internal representations and learning dynamics. It involves computing the outer product of the gradient of the network's output with respect to its input (or intermediate representations) and averaging this over multiple instances or over the training dataset.
