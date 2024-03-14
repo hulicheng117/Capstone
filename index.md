@@ -58,6 +58,7 @@ To investigate the application of the Neural Feature Matrix (NFM) and Average Gr
 
 ### Training graphs
 ![cifar_100_acc](https://github.com/hulicheng117/DSC180-website/assets/97436268/00c1f9ae-8ab3-4576-91a7-865046e19f9f)
+
 <div style="text-align:center">
   
   ![ValTrainDiff](https://github.com/hulicheng117/DSC180-website/assets/97436268/b26c60b7-a312-44b9-bc1c-01f06693c753)
@@ -65,17 +66,12 @@ To investigate the application of the Neural Feature Matrix (NFM) and Average Gr
 
 
 ### Results and Conclusions
-| Initialization Method | SVHN   | CIFAR10 | CIFAR100 | Tiny-ImageNet |
-|-----------------------|--------|---------|----------|---------------|
-| Normal                | 92.35  | 74.26   | 40.18    | 27.73         |
-| Xavier Normal         | 92.66  | 76.56   | 43.09    | 28.49         |
-| Kaiming Uniform       | 93.02  | 77.32   | 44.76    | 33.53         |
-| Kaiming Normal        | 93.13  | 77.10   | 45.31    | 32.38         |
-| AGOP                  | 91.71  | 78.61   | 42.84    | 29.56         |
-| NFM                   | 92.79  | **79.32**| 44.09    | 31.34         |
-| Kaiming NFM           | **93.23**| 78.69   | **48.33**| **33.78**     |
+<div style="text-align:center">
+  <img width="1060" alt="table" src="https://github.com/hulicheng117/DSC180-website/assets/97436268/5bf39188-7d30-41f0-ad64-5a5ea304d88d">
+</div>
 
-NFM initialization outperformed all other initialization methods, achieving the highest validation accuracy across all the datasets. With Kaiming NFM, in particular, achieving remarkable results in 3 of the 4 datasets. It was able to attain highest validation accuracies of 93.23\% on SVHN, 48.33\% on CIFAR100, and 33.78\% on Tiny-ImageNet. 
+
+NFM initialization outperformed all other initialization methods (including pytorch default initialization methods), achieving the highest validation accuracy across all the datasets. With Kaiming NFM, in particular, achieving remarkable results in 3 of the 4 datasets. It was able to attain highest validation accuracies of 93.23% on SVHN, 48.33% on CIFAR100, and 33.78% on Tiny-ImageNet. 
 
 Our initialization methods can be viewed as a soft way of transferring learning. We used the pre-trained model on ImageNet and train the model on simpler datasets. It is worth investigating what if we initialize with model pre-trained on simpler datasets and train on more complex datasets. Some other potential areas of improvement include:
 
