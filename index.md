@@ -1,4 +1,4 @@
-
+## Initializing with Underlying Mechanisms of Deep Convolutional Neural Network
 
 ### Introduction
 Neural networks, mirroring the human brain’s pattern recognition abilities, have revolutionized machine learning. Their success spans various fields, from healthcare to finance,
@@ -59,12 +59,9 @@ To investigate the application of the Neural Feature Matrix (NFM) and Average Gr
 ### Training graphs
 ![cifar_100_acc](https://github.com/hulicheng117/DSC180-website/assets/97436268/00c1f9ae-8ab3-4576-91a7-865046e19f9f)
 
-<div style="text-align:center">
-  
-  
-  ![ValTrainDiff](https://github.com/hulicheng117/DSC180-website/assets/97436268/cac3469f-d96a-405e-8f55-452dc2ebf10c)
+![ValTrainDiff](https://github.com/hulicheng117/DSC180-website/assets/97436268/cac3469f-d96a-405e-8f55-452dc2ebf10c)
 
-</div>
+
 
 
 ### Results and Conclusions
