@@ -20,13 +20,14 @@ This exploration seeks to address the question: How does the application of the 
 Feature Matrix and Average Gradient Outer Product as initialization affect the performance of neural networks?
 
 ### Feature Learning with NFM(Neural Feature Matrix) and AGOP(Average Gradient Outer Product)
-* __The Neural Feature Matrix (NFM)__, denoted by $W^TW$, is the neural feature matrix resulting from multiplying model’s weight matrices.
+* __The Neural Feature Matrix (NFM)__, is the neural feature matrix resulting from multiplying model’s weight matrices.
 * __The Average Gradient Outer Product (AGOP)__ is the average gradient outer product over patches, it is the gradient
 with respect to that patch average over data.
 * Previous studies posit the __Convolutional Neural Feature Ansatz__ [1], which states that there is a positive correlation between AGOP and NFM.
 <div style="text-align:center">
 
-  $$W^TW \propto \frac{1}{n}\sum^{n}_{p=1} \nabla f(x_p)\nabla f(x_p)^T$$
+  <img width="392" alt="Screenshot 2024-03-14 at 4 24 55 PM" src="https://github.com/hulicheng117/DSC180-website/assets/97436268/16575623-71e9-4c79-9173-223ed5f84a0e">
+
 </div>
 
 * The significance of AGOP and NFM is highlighted by findings suggesting that
@@ -58,10 +59,10 @@ To investigate the application of the Neural Feature Matrix (NFM) and Average Gr
 
 ### Training graphs
 ![cifar_100_acc](https://github.com/hulicheng117/DSC180-website/assets/97436268/00c1f9ae-8ab3-4576-91a7-865046e19f9f)
-<div style="text-align:center">
+
   
-  ![ValTrainDiff](https://github.com/hulicheng117/DSC180-website/assets/97436268/cac3469f-d96a-405e-8f55-452dc2ebf10c)
-</div>
+![ValTrainDiff](https://github.com/hulicheng117/DSC180-website/assets/97436268/cac3469f-d96a-405e-8f55-452dc2ebf10c)
+
 
 In our training graph we can see both training and validation accuarcy of Kaiming_NFM outperform the Kaiming_uniform which is the default initialization
 method used in pytorch on CIFAR-100. We also ploted the difference of validation loss and training loss for each initialization method acrossed training process. When the difference is negative, the validation loss is lower than the training loss. This can be a sign of underfitting, meaning the model is not capturing the underlying trends in the training data enough. When the difference is positive (above 0 on the y-axis), the validation loss is higher than the training loss and indicate overfitting. From the graph, our initialization method of agop and nfm showed robust to overfit than other initialization
