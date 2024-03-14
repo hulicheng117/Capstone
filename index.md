@@ -20,7 +20,7 @@ This exploration seeks to address the question: How does the application of the 
 Feature Matrix and Average Gradient Outer Product as initialization affect the performance of neural networks?
 
 ### Feature Learning with NFM(Neural Feature Matrix) and AGOP(Average Gradient Outer Product)
-* __The Neural Feature Matrix (NFM)__, is the neural feature matrix resulting from multiplying model’s weight matrices.
+* __The Neural Feature Matrix (NFM)__, denoted by $W^TW$, is the neural feature matrix resulting from multiplying model’s weight matrices.
 * __The Average Gradient Outer Product (AGOP)__ is the average gradient outer product over patches, it is the gradient
 with respect to that patch average over data.
 * Previous studies posit the __Convolutional Neural Feature Ansatz__ [1], which states that there is a positive correlation between AGOP and NFM.
