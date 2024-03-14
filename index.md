@@ -51,7 +51,7 @@ To investigate the application of the Neural Feature Matrix (NFM) and Average Gr
         - __Normal__:  extract weights from a normal distribution.
         - __Uniform__: extract weights from a uniform distribution.
         - __AGOP and NFM__:  We use the pre-trained model from PyTorch to extract AGOP and NFM, and use these as the covariant matrix to generate a multivariate Gaussian for sampling weights for initialization.
-        - __Kaiming__: Kaiming initialization is one of the most effective methods for initializing convolutional layer weights, it is also the default initialization method for Conv2d in PyTorch. The method changes the parameters (e.g. std for normal, range for uniform, covariance matrix NFM) of the distribution based on layer width and the type of activation function.
+        - __Kaiming__: Kaiming initialization[2] is one of the most effective methods for initializing convolutional layer weights, it is also the default initialization method for Conv2d in PyTorch. The method changes the parameters (e.g. std for normal, range for uniform, covariance matrix NFM) of the distribution based on layer width and the type of activation function.
   * __Experiment and Hyper-parameters__: Using the VGG11 architecture, we investigated the performance of AGOP and NFM initialization methods on model training. We employed SGD with a learning rate of 0.001 and cross-entropy loss. The goal was to control initialization methods as the only variable.
 
 
