@@ -1,4 +1,4 @@
-## Initializing with Underlying Mechanisms of Deep Convolutional Neural Network
+# Initializing with Underlying Mechanisms of Deep Convolutional Neural Network
 
 ### Introduction
 Neural networks, mirroring the human brain’s pattern recognition abilities, have revolutionized machine learning. Their success spans various fields, from healthcare to finance,
